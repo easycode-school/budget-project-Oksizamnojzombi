@@ -1,0 +1,10 @@
+.todosForm {
+  margin-top: 10%;
+  border: 1px solid darkgray;
+  padding: 25px 20px;
+}
+
+.addTask {
+  display: block;
+  margin: 0 auto;
+}

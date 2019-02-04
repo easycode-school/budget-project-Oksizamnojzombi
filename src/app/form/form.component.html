@@ -1,0 +1,21 @@
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-8 todosForm">
+      <form (ngSubmit)="onSubmitHandler(todoForm)" #todoForm="ngForm" novalidate>
+        <div *ngIf='isInvalid' class="alert alert-danger" role="alert">
+          <p>Please write the name of the task and its contents.</p>
+        </div>
+        <div class="form-group">
+          <label for="inputTask"  class="text-center col-12">Task</label>
+          <input [(ngModel)]="newTodo.task" name="task" type="text" class="form-control" id="inputTask" placeholder="Name of task" required>
+        </div>
+        <div class="form-group">
+          <label for="inputContent"  class="text-center col-12">Content of task</label>
+          <input [(ngModel)]="newTodo.content" name="content" type="text" class="form-control" id="inputContent" placeholder="Content of task" required>
+        </div>
+        <button type="submit" class="btn btn-primary col-6 addTask">Add task</button>
+      </form>
+    </div>
+  </div>
+</div>
